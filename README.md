@@ -51,3 +51,4 @@ rostopic pub /start_journey std_msgs/Empty -1
 3. [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints)
 4. [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints)
 5. [Follow waypoints in ROS Tutorial](http://wiki.ros.org/follow_waypoints)
+6. [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html)
