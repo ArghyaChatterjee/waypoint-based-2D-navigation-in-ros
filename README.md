@@ -40,13 +40,24 @@ Then convert the image file to binary bit map.
 ```
 python3 convert_png_to_bitmap.py
 ```
+This will generate 2 files namely `mapa100-binary_raster_res0.0744m_org-start600x320pix_inv.pgm` and `mapa100-binary_raster_res0.0744m_org-start600x320pix.yaml`. Here is some metadata:
+```
+Map size: 647x615 px → 48.14m x 45.76m
+Map Resolution: 0.0744
+Image Name: mapa100-binary_raster_res0.0744m_org-start600x320pix.pgm
+Origin (px): 600x320
+Origin (m): [-44.63999999999999, -23.808, 0.0]
+Negate: 0
+Occupied_thresh: 0.65
+Free_thresh: 0.196
+```
 
 ## Installation
 
 First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
 
 <div align="center">
-  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="800">
+  <img src="media/rf2o_laser_odom.gif" alt="Waypoint Navigation" width="800">
 </div>
 
 Install binary package using ROS package manager:
