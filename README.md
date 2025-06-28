@@ -1,4 +1,4 @@
-# waypoint-based-2D-Navigation-in-ROS
+# waypoint-based-2D-navigation-in-ROS
 2D waypoints will be predefined in ROS based robots to navigate to the destination avoiding obstacles.
 
 A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
