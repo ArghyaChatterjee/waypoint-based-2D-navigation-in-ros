@@ -1,0 +1,6 @@
+image: mapa100-binary_raster_res0.0744m_org-start600x320pix.pgm
+resolution: 0.0744
+origin: [-44.63999999999999, -23.808, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
