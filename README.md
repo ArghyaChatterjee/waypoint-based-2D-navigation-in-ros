@@ -28,7 +28,7 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 
 ## Installation
 
-Install the package using ROS package manager:
+First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). Then, install binary package using ROS package manager:
 
 ```bash
 sudo apt-get install ros-melodic-follow-waypoints
