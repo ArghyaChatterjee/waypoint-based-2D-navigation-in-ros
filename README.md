@@ -25,10 +25,30 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 
 ## Create Binary Map from Image File
 
+<div align="center">
+  <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix.png" alt="Waypoint Navigation" width="400">
+  <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix_inv.png" alt="Waypoint Navigation" width="400">
+</div>
+
+First, convert the tiled map to image file with color inverted. 
+```
+cd scripts
+python3 convert_tiff_to_png.py
+```
+Then convert the image file to binary bit map.
+```
+python3 convert_png_to_bitmap.py
+```
 
 ## Installation
 
-First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). Then, install binary package using ROS package manager:
+First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
+
+<div align="center">
+  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="800">
+</div>
+
+Install binary package using ROS package manager:
 
 ```bash
 sudo apt-get install ros-melodic-follow-waypoints
