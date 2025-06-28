@@ -52,6 +52,22 @@ Occupied_thresh: 0.65
 Free_thresh: 0.196
 ```
 
+<div align="center">
+  <img src="maps/points_map_aligned.png" alt="Waypoint Navigation" width="400">
+  <img src="maps/points_map_overlayed.png" alt="Waypoint Navigation" width="400">
+</div>
+
+## Create Waypoints from Global to Local Coordinates
+The original coordinates are global latitude, longitude, and altitude. Convert the global coordinate to local x, y, z coordinates:
+```
+python3 convert_global_to_local_cordinate.py
+```
+
+<div align="center">
+  <img src="maps/points_coords_global.png" alt="Waypoint Navigation" width="400">
+  <img src="maps/points_coords_local.png" alt="Waypoint Navigation" width="400">
+</div>
+
 ## Installation
 
 First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
