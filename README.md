@@ -58,7 +58,20 @@ Free_thresh: 0.196
 </div>
 
 ## Create Waypoints from Global to Local Coordinates
-The original coordinates are global latitude, longitude, and altitude. Convert the global coordinate to local x, y, z coordinates:
+
+There are in total of 25 coordinate points. They are:
+
+- 19 Landmarks (Aruco Marker)
+- 5 Waypoints
+- 1 Start point 
+
+The original global coordinates are:
+
+- latitude,
+- longitude, and
+- altitude 
+
+Convert the global coordinate to local x, y, z coordinates:
 ```
 python3 convert_global_to_local_cordinate.py
 ```
@@ -67,6 +80,20 @@ python3 convert_global_to_local_cordinate.py
   <img src="maps/points_coords_global.png" alt="Waypoint Navigation" width="400">
   <img src="maps/points_coords_local.png" alt="Waypoint Navigation" width="400">
 </div>
+
+The start point is:
+```
+start point: PSK_1  0.000  0.000  0.000 
+```
+
+The waypoints to navigate are:
+```
+waypoint 1: PSK_25  8.040  -13.266  0.504
+waypoint 2: PSK_13  4.365  -23.413  0.037
+waypoint 3: PSK_17  -1.436  -37.767  -0.199
+waypoint 4: PSK_20  -8.369  -31.065  -0.087
+waypoint 5: PSK_24  -7.325  -24.162  -0.756
+```
 
 ## Installation
 
