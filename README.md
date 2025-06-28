@@ -3,7 +3,7 @@
 This ROS package enables robots to autonomously navigate through predefined 2D waypoints while effectively avoiding obstacles. It integrates seamlessly with the ROS `move_base` framework, buffering navigation goals and sequentially dispatching them upon command.
 
 <div align="center">
-  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="600">
+  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="800">
 </div>
 
 ---
