@@ -23,6 +23,9 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 
 ---
 
+## Create Binary Map from Image File
+
+
 ## Installation
 
 Install the package using ROS package manager:
