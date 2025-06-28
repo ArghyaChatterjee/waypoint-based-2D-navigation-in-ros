@@ -5,34 +5,44 @@ import os
 
 # ----- Configuration Parameters -----
 # Input binary floor plan image
-input_image_path = "../maps/floor_plans/maze_01_binary.png"
+input_image_path = "../maps/mapa100-binary_raster_res0.0744m_org-start600x320pix_inv.png"
 
 # Output filenames and location
-output_filename_base = "maze_01_binary"
+output_filename_base = "mapa100-binary_raster_res0.0744m_org-start600x320pix_inv"
 output_directory = "../maps/"
 
-# Real-world width of the map in meters (adjustable)
-map_width_meters = 40.0
-map_resolution = 0.05  # meters per pixel (standard ROS occupancy grid resolution)
+# Map resolution in meters/pixel (from filename or metadata)
+map_resolution = 0.0744
 
-# Map origin coordinates for ROS (adjustable)
-origin_x = -1.0
-origin_y = -1.0
-origin_theta = 0.0
+# Robot's start pixel (this will be aligned to world origin [0, 0])
+start_pixel_x = 600
+start_pixel_y = 320
 
 # ----- Image Loading -----
 original_image = cv2.imread(input_image_path)
 
-if original_image is None:
+if original_image is None or original_image.size == 0:
     raise FileNotFoundError(f"Cannot load image: {input_image_path}")
 
 original_height, original_width, _ = original_image.shape
 
-# ----- Calculate Scaling Factors -----
-scale_x = (map_width_meters / (original_width * map_resolution))
-scale_y = scale_x  # Maintain aspect ratio based on width
+# ----- Compute Map Size in Meters -----
+map_width_meters = original_width * map_resolution
+map_height_meters = original_height * map_resolution
 
-# Resize image with calculated scaling factors
+print(f"Map size: {original_width}x{original_height} px → {map_width_meters:.2f}m x {map_height_meters:.2f}m")
+
+# ----- Compute Map Origin -----
+# This shifts the (600, 320) pixel to (0, 0) in world coordinates
+origin_x = -start_pixel_x * map_resolution
+origin_y = -start_pixel_y * map_resolution
+origin_theta = 0.0
+
+# ----- Resize (if needed for ROS or visualization, otherwise skip) -----
+# Keeping 1.0 scaling means no resize here; adjust if needed
+scale_x = 1.0
+scale_y = 1.0
+
 resized_image = cv2.resize(
     original_image, None, fx=scale_x, fy=scale_y, interpolation=cv2.INTER_CUBIC
 )
