@@ -11,8 +11,6 @@ Install the binaries needed for the package.
 sudo apt-get install ros-melodic-follow-waypoints
 ```
 
-### New features not documented on wiki: 
-
 #### The code can be run in this way:
 
 ```
