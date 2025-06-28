@@ -1,9 +1,9 @@
-# waypoint-based-2D-navigation
-2D waypoints will be predefined in ROS based robots to navigate to the destination avoiding obstacles.
+# waypoint based 2D navigation
+2D waypoints will be predefined in ROS-based robots to navigate to the destination avoiding obstacles. A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
 
-A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
-
-![follow_waypoints](readme_images/follow_waypoints_rviz.png "rviz")
+<div align="center">
+  <img src="media/waypoint_nav.png" width="600">
+</div>
 
 ## Installation
 Install the binaries needed for the package.
