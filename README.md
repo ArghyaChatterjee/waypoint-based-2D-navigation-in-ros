@@ -2,7 +2,7 @@
 2D waypoints will be predefined in ROS-based robots to navigate to the destination avoiding obstacles. A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
 
 <div align="center">
-  <img src="media/waypoint_nav.png" width="600">
+  <img src="media/waypoint_nav.jpg" width="600">
 </div>
 
 ## Installation
