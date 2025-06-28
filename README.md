@@ -24,6 +24,7 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 ---
 
 ## Create Binary Map from Image File
+Most of the time, the data is in the form of tiled image file. You can see in the [ArcGIS](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/raster-data-display-decisions.html) website for more info.
 
 <div align="center">
   <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix.png" alt="Waypoint Navigation" width="400">
