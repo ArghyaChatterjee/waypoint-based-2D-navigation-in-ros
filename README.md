@@ -2,10 +2,8 @@
 
 This ROS package enables robots to autonomously navigate through predefined 2D waypoints while effectively avoiding obstacles. It integrates seamlessly with the ROS `move_base` framework, buffering navigation goals and sequentially dispatching them upon command.
 
-## Repository Workflow
-
 <div align="center">
-  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="800">
+  <img src="media/waypoint_nav_2d.gif" alt="Waypoint Navigation" width="800">
 </div>
 
 ## Features
@@ -14,6 +12,14 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 * **Sequential Navigation:** Automatically navigate through waypoints in order.
 * **Obstacle Avoidance:** Utilize ROS `move_base` to avoid obstacles effectively.
 * **Customizable Parameters:** Control waypoint wait duration and waypoint arrival tolerance.
+
+---
+
+## Repository Workflow
+
+<div align="center">
+  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="800">
+</div>
 
 ---
 
