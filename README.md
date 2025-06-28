@@ -1,47 +1,77 @@
-# waypoint based 2D navigation
-2D waypoints will be predefined in ROS-based robots to navigate to the destination avoiding obstacles. A package that will buffer `move_base` goals until instructed to navigate to all waypoints in sequence.
+# Waypoint-Based 2D Navigation for ROS Robots
+
+This ROS package enables robots to autonomously navigate through predefined 2D waypoints while effectively avoiding obstacles. It integrates seamlessly with the ROS `move_base` framework, buffering navigation goals and sequentially dispatching them upon command.
 
 <div align="center">
-  <img src="media/waypoint_nav.png" width="600">
+  <img src="media/waypoint_nav.png" alt="Waypoint Navigation" width="600">
 </div>
 
+---
+
+## Features
+
+* **Waypoint Buffering:** Queue multiple navigation goals.
+* **Sequential Navigation:** Automatically navigate through waypoints in order.
+* **Obstacle Avoidance:** Utilize ROS `move_base` to avoid obstacles effectively.
+* **Customizable Parameters:** Control waypoint wait duration and waypoint arrival tolerance.
+
+---
+
 ## Installation
-Install the binaries needed for the package.
-```
+
+Install the package using ROS package manager:
+
+```bash
 sudo apt-get install ros-melodic-follow-waypoints
 ```
 
-#### The code can be run in this way:
+---
 
-```
+## Usage
+
+Launch the waypoint follower:
+
+```bash
 rosrun follow_waypoints follow_waypoints.py
 ```
 
-#### A wait_duration parameter. This sets wait duration in between waypoints. The default value is set to 0.0 sec.
+### Parameters
 
-```
+#### Wait Duration Between Waypoints
+
+Controls the pause duration between reaching one waypoint and navigating to the next. Default is `0.0` seconds (no wait).
+
+```bash
 rosparam set wait_duration 5.0
 ```
 
-#### A distance threshold parameter. Issue the next goal target if the robot reaches within this distance. This has the effect of smoothing motion and not stopping at each waypoint. The default value is set to 0.0 distance which disables the feature.
+#### Waypoint Distance Tolerance
 
-```
+Triggers the robot to move to the next waypoint once it is within this threshold distance, resulting in smoother continuous navigation. Default is `0.0` (feature disabled).
+
+```bash
 rosparam set waypoint_distance_tolerance 0.5
 ```
 
-#### Following waypoints will save the list of poses to a file in the following directory:
+---
 
-```
+## Saving and Loading Waypoints
+
+The list of waypoints is automatically saved to:
+
+```bash
 follow_waypoints/saved_path/pose.csv
 ```
 
-#### To load the previously save path:
+### Start Navigation with Previously Saved Waypoints
 
-```
+Publish to the `/start_journey` topic to initiate navigation using the previously saved waypoints:
+
+```bash
 rostopic pub /start_journey std_msgs/Empty -1
 ```
 
 ![follow_waypoints](readme_images/follow_waypoint.gif "rviz")
 
 ## Acknowledgement
-We sincerely thank the developers and contributors of [Follow waypoints by daniel snider](https://github.com/danielsnider/follow_waypoints), [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints), [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints), [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints), [Follow waypoints ROS Tutorial](http://wiki.ros.org/follow_waypoints), [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html) and [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver)
+We sincerely thank the developers and contributors of , [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints), [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints), [Follow waypoints by daniel snider](https://github.com/danielsnider/follow_waypoints), [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints), [Follow waypoints ROS Tutorial](http://wiki.ros.org/follow_waypoints), [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html) and [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver).
