@@ -45,11 +45,5 @@ rostopic pub /start_journey std_msgs/Empty -1
 
 ![follow_waypoints](readme_images/follow_waypoint.gif "rviz")
 
-## Source
-1. [Follow waypoints by Daniel Snider](https://github.com/danielsnider/follow_waypoints)
-2. [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints)
-3. [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints)
-4. [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints)
-5. [Follow waypoints in ROS Tutorial](http://wiki.ros.org/follow_waypoints)
-6. [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html)
-7. [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver)
+## Acknowledgement
+We sincerely thank the developers and contributors of [Follow waypoints by daniel snider](https://github.com/danielsnider/follow_waypoints), [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints), [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints), [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints), [Follow waypoints ROS Tutorial](http://wiki.ros.org/follow_waypoints), [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html) and [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver)
