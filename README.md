@@ -81,9 +81,9 @@ Free_thresh: 0.196
   <img src="maps/points_map_aligned.png" alt="Waypoint Navigation" width="400">
   <img src="maps/points_map_overlayed.png" alt="Waypoint Navigation" width="400">
   <br>
-  <b>Point Map</b>
+  <b>Point Sketch Map</b>
   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <b>Point Map Overlayed</b>
+  <b>Point Obstacle Map Overlayed</b>
 </div>
 
 ## Create Waypoints from Global to Local Coordinates
