@@ -95,7 +95,7 @@ waypoint 4: PSK_20  -8.369  -31.065  -0.087
 waypoint 5: PSK_24  -7.325  -24.162  -0.756
 ```
 
-## Installation
+## Laser Odometry
 
 First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
 
@@ -103,7 +103,16 @@ First, install 2D laser odometry package from one of my [repo](https://github.co
   <img src="media/rf2o_laser_odom.gif" alt="Waypoint Navigation" width="800">
 </div>
 
-Install binary package using ROS package manager:
+## Installation
+Install source package:
+```
+cd catkin_ws
+git clone
+catkin build
+source /opt/ros/melodic/setup.bash
+source devel/setup.bash
+```
+For binary package installation, follow this:
 
 ```bash
 sudo apt-get install ros-melodic-follow-waypoints
@@ -111,7 +120,7 @@ sudo apt-get install ros-melodic-follow-waypoints
 
 ---
 
-## Usage
+## Follow Waypoints
 
 Launch the waypoint follower:
 
