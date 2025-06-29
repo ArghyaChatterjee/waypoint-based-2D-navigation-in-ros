@@ -47,16 +47,6 @@ sudo apt-get install ros-melodic-follow-waypoints
 ## Create Binary Map from Image File
 Most of the time, the data is in the form of a tiled image file. You can see in the [ArcGIS](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/raster-data-display-decisions.html) website for more info.
 
-
-<div align="center">
-    <img src="img/tare_planner.gif" alt="TARE Planner" width="400">
-    <img src="img/dsv_planner.gif" alt="DSV Planner" width="400">
-  <br>
-  <b>TARE Planner</b>
-  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-  <b>DSV Planner</b>
-</div>
-
 <div align="center">
   <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix.png" alt="Waypoint Navigation" width="400">
   <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix_inv.png" alt="Waypoint Navigation" width="400">
