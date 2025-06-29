@@ -125,7 +125,7 @@ This CSV will also contain a list of robot bearing head after the robot reached 
 
 ## Laser Odometry
 
-First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
+First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). A SLAMtec RPLidar A1 has been used during this project.
 
 <div align="center">
   <img src="media/rf2o_laser_odom.gif" alt="Waypoint Navigation" width="800">
