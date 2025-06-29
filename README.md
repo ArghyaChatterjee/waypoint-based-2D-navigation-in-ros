@@ -121,11 +121,14 @@ Save the above-mentioned list of waypoints to:
 ```bash
 waypoint_nav_2d/saved_path/pose.csv
 ```
-This CSV will also contain a list of robot bearing head after the robot reached each waypoint. 
+This CSV will also contain a list of robot's yaw heading after the robot reaches each waypoint. 
 
 ## Laser Odometry
 
-First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). A SLAMtec RPLidar A1 has been used during this project.
+A SLAMtec RPLidar A1 has been used during this project.
+
+- Install 2D Laser SDK from the official [site](https://github.com/Slamtec/rplidar_ros).
+- Install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
 
 <div align="center">
   <img src="media/rf2o_laser_odom.gif" alt="Waypoint Navigation" width="800">
@@ -180,4 +183,4 @@ rostopic pub /start_journey std_msgs/Empty -1
 ![follow_waypoints](readme_images/follow_waypoint.gif "rviz")
 
 ## Acknowledgement
-We sincerely thank the developers and contributors of , [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints), [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints), [Follow waypoints by daniel snider](https://github.com/danielsnider/follow_waypoints), [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints), [Follow waypoints ROS Tutorial](http://wiki.ros.org/follow_waypoints), [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html) and [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver).
+We sincerely thank the developers and contributors of [Automatic Addison](https://www.youtube.com/watch?v=ySlU5CIXUKE), [Snowcron](https://robotics.snowcron.com/robotics_ros2/adv_nav_creating_map.htm), [Follow waypoints by SLAMCore](https://github.com/slamcore/follow_waypoints), [Follow waypoints by Qbotics Lab](https://github.com/qboticslabs/follow_waypoints), [Follow waypoints by daniel snider](https://github.com/danielsnider/follow_waypoints), [Follow waypoints by Sugbuv](https://github.com/sugbuv/follow_waypoints), [Follow waypoints ROS Tutorial](http://wiki.ros.org/follow_waypoints), [Follow waypoints in ROS2 Tutorial](https://navigation.ros.org/configuration/packages/configuring-waypoint-follower.html) and [Neo Goal Sequence Driver](https://github.com/neobotix/neo_goal_sequence_driver).
