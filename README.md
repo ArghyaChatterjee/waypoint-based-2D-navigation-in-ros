@@ -107,7 +107,7 @@ First, install 2D laser odometry package from one of my [repo](https://github.co
 Install source package:
 ```
 cd catkin_ws
-git clone
+git clone https://github.com/ArghyaChatterjee/waypoint-based-2D-navigation.git
 catkin build
 source /opt/ros/melodic/setup.bash
 source devel/setup.bash
