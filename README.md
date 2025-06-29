@@ -23,6 +23,23 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 
 ---
 
+## Package Installation
+For source installation, follow this:
+```
+source /opt/ros/melodic/setup.bash
+cd catkin_ws/src
+git clone https://github.com/ArghyaChatterjee/waypoint-based-2D-navigation.git waypoint_nav_2d
+cd ..
+catkin build
+source devel/setup.bash
+cd catkin_ws/src/waypoint_nav_2d
+```
+For binary package installation, follow this:
+
+```bash
+sudo apt-get install ros-melodic-follow-waypoints
+```
+
 ## Create Binary Map from Image File
 Most of the time, the data is in the form of tiled image file. You can see in the [ArcGIS](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/raster-data-display-decisions.html) website for more info.
 
@@ -95,6 +112,15 @@ waypoint 4: PSK_20  -8.369  -31.065  -0.087
 waypoint 5: PSK_24  -7.325  -24.162  -0.756
 ```
 
+## Saving Waypoints
+
+Save the above-mentioned list of waypoints to:
+
+```bash
+waypoint_nav_2d/saved_path/pose.csv
+```
+This CSV will also contain a list of robot bearing head after the robot reached each waypoint. 
+
 ## Laser Odometry
 
 First, install 2D laser odometry package from one of my [repo](https://github.com/ArghyaChatterjee/rf2o_laser_odometry). 
@@ -102,21 +128,6 @@ First, install 2D laser odometry package from one of my [repo](https://github.co
 <div align="center">
   <img src="media/rf2o_laser_odom.gif" alt="Waypoint Navigation" width="800">
 </div>
-
-## Installation
-Install source package:
-```
-cd catkin_ws
-git clone https://github.com/ArghyaChatterjee/waypoint-based-2D-navigation.git
-catkin build
-source /opt/ros/melodic/setup.bash
-source devel/setup.bash
-```
-For binary package installation, follow this:
-
-```bash
-sudo apt-get install ros-melodic-follow-waypoints
-```
 
 ---
 
@@ -148,9 +159,9 @@ rosparam set waypoint_distance_tolerance 0.5
 
 ---
 
-## Saving and Loading Waypoints
+## Loading Waypoints
 
-The list of waypoints is automatically saved to:
+The list of waypoints will be loaded from:
 
 ```bash
 follow_waypoints/saved_path/pose.csv
