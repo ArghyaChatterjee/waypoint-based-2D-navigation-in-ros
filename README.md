@@ -5,7 +5,9 @@ This ROS package enables robots to autonomously navigate through predefined 2D w
 This project is part of the Autonomy Task at the European Rover Challenge 2019.
 
 <div align="center">
-  <img src="media/waypoint_nav_2d.gif" alt="Waypoint Navigation" width="800">
+  <a href="https://www.youtube.com/watch?v=o9WPs5m3tog">
+    <img src="media/waypoint_nav_2d.gif" alt="Waypoint Navigation" width="800">
+  </a>
 </div>
 
 ## Features
@@ -43,11 +45,25 @@ sudo apt-get install ros-melodic-follow-waypoints
 ```
 
 ## Create Binary Map from Image File
-Most of the time, the data is in the form of tiled image file. You can see in the [ArcGIS](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/raster-data-display-decisions.html) website for more info.
+Most of the time, the data is in the form of a tiled image file. You can see in the [ArcGIS](https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/raster-data-display-decisions.html) website for more info.
+
+
+<div align="center">
+    <img src="img/tare_planner.gif" alt="TARE Planner" width="400">
+    <img src="img/dsv_planner.gif" alt="DSV Planner" width="400">
+  <br>
+  <b>TARE Planner</b>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <b>DSV Planner</b>
+</div>
 
 <div align="center">
   <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix.png" alt="Waypoint Navigation" width="400">
   <img src="maps/mapa100-binary_raster_res0.0744m_org-start600x320pix_inv.png" alt="Waypoint Navigation" width="400">
+  <br>
+  <b>Tiled Map</b>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <b>Inverted Bit Map</b>
 </div>
 
 First, convert the tiled map to image file with color inverted. 
@@ -74,6 +90,10 @@ Free_thresh: 0.196
 <div align="center">
   <img src="maps/points_map_aligned.png" alt="Waypoint Navigation" width="400">
   <img src="maps/points_map_overlayed.png" alt="Waypoint Navigation" width="400">
+  <br>
+  <b>Point Map</b>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <b>Point Map Overlayed</b>
 </div>
 
 ## Create Waypoints from Global to Local Coordinates
@@ -98,6 +118,10 @@ python3 convert_global_to_local_cordinate.py
 <div align="center">
   <img src="maps/points_coords_global.png" alt="Waypoint Navigation" width="400">
   <img src="maps/points_coords_local.png" alt="Waypoint Navigation" width="400">
+  <br>
+  <b>Global Coordinates</b>
+  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <b>Local Coordinates</b>
 </div>
 
 The start point is:
