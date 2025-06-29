@@ -1,6 +1,8 @@
 # Waypoint-Based 2D Navigation for ROS Robots
 
-This ROS package enables robots to autonomously navigate through predefined 2D waypoints while effectively avoiding obstacles. It integrates seamlessly with the ROS `move_base` framework, buffering navigation goals and sequentially dispatching them upon command. This is part of the Autonomy Task at European Rover Challenge 2019.
+This ROS package enables robots to autonomously navigate through predefined 2D waypoints while effectively avoiding obstacles. It integrates seamlessly with the ROS `move_base` framework, buffering navigation goals and sequentially dispatching them upon command. 
+
+This project is part of the Autonomy Task at the European Rover Challenge 2019.
 
 <div align="center">
   <img src="media/waypoint_nav_2d.gif" alt="Waypoint Navigation" width="800">
